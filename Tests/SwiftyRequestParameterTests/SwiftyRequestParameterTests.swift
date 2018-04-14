@@ -18,14 +18,12 @@ final class SwiftyRequestParameterTests: XCTestCase {
         return "abc"
     }
     
-    func dictionaryParameter() -> RequestParameter {
-        let dict: [String: RequestParameter] = ["abc": 123, "def": "xyz"]
-        return dict
+    func dictionaryParameter() -> RequestParameterDictionary {
+        return ["abc": 123, "def": "xyz"]
     }
     
-    func arrayParameter() -> RequestParameter {
-        let array: RequestParameter = ["abc", "def", "ghi"]
-        return array
+    func arrayParameter() -> RequestParameterArray {
+        return ["abc", "def", "ghi"]
     }
 
     static var allTests = [
