@@ -1,0 +1,13 @@
+%{
+codable_types = ['Bool', 'String', 'Double', 'Float',
+                 'Int', 'Int8', 'Int16', 'Int32', 'Int64',
+                 'UInt', 'UInt8', 'UInt16', 'UInt32', 'UInt64']
+}%
+
+% for type in codable_types:
+extension ${type}: RequestParameter {
+    public func requestParameter() -> RequestParameter {
+        return self
+    }
+}
+% end
